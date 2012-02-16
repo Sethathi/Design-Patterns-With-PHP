@@ -135,10 +135,7 @@ class Database {
         return $this->_mysqli->query($query);
     }
 
-    public function prepared_query($query, $params){
-        $stmt = $this->_mysqli->prepare($query);
-
-    }
+    
 
     /**
      * Here we close the connection to the database server with the  destructor
