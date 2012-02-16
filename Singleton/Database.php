@@ -30,7 +30,8 @@ class Database {
      * @var String
      * @access private
      */
-    private $_password = '3628800sql';
+    //private $_password = '3628800sql';
+    private $_password = '';
 
     /**
      * The database name
@@ -39,7 +40,7 @@ class Database {
      * @var String
      * @access private
      */
-    private $_db_name = 'mysql';
+    private $_db_name = 'viasms';
 
     /**
      * The mysqli instance we are going to use in this class
@@ -126,7 +127,16 @@ class Database {
      * @access public 
      */
     public function query($query) {
+        if(!$query)
+            return;
+        //echo "Prevent SQL Injection. \n"
+        $query = $this->_mysqli->real_escape_string($query);
         return $this->_mysqli->query($query);
+    }
+
+    public function prepared_query($query, $params){
+        $stmt = $this->_mysqli->prepare($query);
+        
     }
 
     /**
