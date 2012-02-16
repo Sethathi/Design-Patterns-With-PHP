@@ -129,6 +129,7 @@ class Database {
     public function query($query) {
         if(!$query)
             return;
+            
         //echo "Prevent SQL Injection. \n"
         $query = $this->_mysqli->real_escape_string($query);
         return $this->_mysqli->query($query);
@@ -136,7 +137,7 @@ class Database {
 
     public function prepared_query($query, $params){
         $stmt = $this->_mysqli->prepare($query);
-        
+
     }
 
     /**
