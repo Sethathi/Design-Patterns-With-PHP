@@ -40,7 +40,7 @@ class Database {
      * @var String
      * @access private
      */
-    private $_db_name = 'viasms';
+    private $_db_name = 'test';
 
     /**
      * The mysqli instance we are going to use in this class
@@ -132,6 +132,16 @@ class Database {
         //echo "Prevent SQL Injection. \n"
         $query = $this->_mysqli->real_escape_string($query);
         return $this->_mysqli->query($query);
+    }
+
+    /**
+    * This function creates a mysqli object for use with mysqli prepare
+    * 
+    * @access public
+    * @return return mysqli prepared statement object
+    */
+    public function stmt_init(){
+        return $this->_mysqli->stmt_init();
     }
 
     
