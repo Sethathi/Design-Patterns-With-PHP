@@ -30,7 +30,7 @@ class Database {
      * @var String
      * @access private
      */
-    //private $_password = '3628800sql';
+    
     private $_password = '';
 
     /**
