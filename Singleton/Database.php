@@ -40,7 +40,7 @@ class Database {
      * @var String
      * @access private
      */
-    private $_db_name = 'viasms';
+    private $_db_name = 'test';
 
     /**
      * The mysqli instance we are going to use in this class
