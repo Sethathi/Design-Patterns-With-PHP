@@ -30,7 +30,7 @@ class Database {
      * @var String
      * @access private
      */
-    //private $_password = '3628800sql';
+    
     private $_password = '';
 
     /**
@@ -40,7 +40,11 @@ class Database {
      * @var String
      * @access private
      */
+<<<<<<< HEAD
     private $_db_name = 'test';
+=======
+    private $_db_name = 'mysql';
+>>>>>>> queryFunctionSanitation
 
     /**
      * The mysqli instance we are going to use in this class
@@ -127,7 +131,7 @@ class Database {
      * @access public 
      */
     public function query($query) {
-        if(!$query)
+        if(!isset($query))
             return;
         //echo "Prevent SQL Injection. \n"
         $query = $this->_mysqli->real_escape_string($query);
