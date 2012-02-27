@@ -40,11 +40,9 @@ class Database {
      * @var String
      * @access private
      */
-<<<<<<< HEAD
+
     private $_db_name = 'test';
-=======
-    private $_db_name = 'mysql';
->>>>>>> queryFunctionSanitation
+
 
     /**
      * The mysqli instance we are going to use in this class

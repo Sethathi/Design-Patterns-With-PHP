@@ -19,10 +19,10 @@ class SMS_notification implements IMessage{
     var $api_id = NULL;
 
     /* phone number to send an SMS to*/
-    var $to = NULL;
+    public $to = NULL;
 
-    /* actual notification message */
-    var $text = NULL;
+    /* actual notification message will be in here */
+    public $text = NULL;
 
   
     public function __construct($to, $text){
@@ -38,6 +38,7 @@ class SMS_notification implements IMessage{
     *
     */
 	public function send(){
+        
 
 		$sent = FALSE;
         
@@ -71,7 +72,6 @@ class SMS_notification implements IMessage{
         } else {
             echo 'Authentication failure: ' . $ret[0];
         }
-
         return $sent;
     }
 		
