@@ -18,9 +18,9 @@ if ((is_callable(array($database1, '__construct'))) === FALSE) {
     echo "Constructor is callable, SHOULD NOT BE ALLOWED.\n";
 }
 
-$result = $database1->query("Select * from users");
+$result = $database1->query("Select * from people");
 if($result)
-	$result = $result->fetch_array();
-echo $result['password'];
+	$result = $result->fetch();
+echo $result['name'];
 
 ?>
