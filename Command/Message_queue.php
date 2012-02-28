@@ -11,7 +11,7 @@ class Message_queue{
 	var $_queue = array();
 
 	/**
-	* This method add messages to a queue
+	* This method adds messages to a queue
 	*
 	* @param IMessage message
 	* @return void
