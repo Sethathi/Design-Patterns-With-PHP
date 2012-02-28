@@ -152,14 +152,15 @@ class Database
      * 
      * @access public 
      */
-    public function query($query)
+    public function query($query, $bind_params = NULL)
     {
-        if ( ! isset($query))
-        {
-            return FALSE;
-        }
         //echo "Prevent SQL Injection. \n"
         //$query = $this->_db_handle->real_escape_string($query);
+	$stm = $this->_db_handle->prepare($query);
+	if (is_array($bind_params) && ! empty($bind_params))
+	{
+        	return $stm->execute($bind_params);
+	}
         return $this->_db_handle->query($query);
     }
 
