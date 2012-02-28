@@ -18,9 +18,11 @@ if ((is_callable(array($database1, '__construct'))) === FALSE) {
     echo "Constructor is callable, SHOULD NOT BE ALLOWED.\n";
 }
 
+echo "Checking database for data..\n";
 $result = $database1->query("Select * from people");
-if($result)
-	$result = $result->fetch();
-echo $result['name'];
+while ($row = $result->fetch())
+{
+    echo "Person: ${row['id']} ${row['name']} ${row['surname']}\n";
+}
 
 ?>
