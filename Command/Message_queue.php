@@ -39,7 +39,7 @@ class Message_queue{
 				++$total_sent;
 		}
 
-		echo "$total_sent out of $total_messages messages sent";
+		echo "$total_sent out of $total_messages messages sent\n";
 	}
 
 
