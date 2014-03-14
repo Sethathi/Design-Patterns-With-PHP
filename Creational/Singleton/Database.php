@@ -43,7 +43,7 @@ class Database
 	 */
 	private function __construct()
 	{
-		require_once('../__database__/database.conf');
+		require_once('../../__database__/database.conf');
 		//database config
 		$this->_db_conf = $database_conf;
 		$this->_db_tables = $database_tables;
