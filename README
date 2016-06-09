@@ -1,6 +1,6 @@
-Design Patterns With PHP
+*Design Patterns With PHP*
 
-GoF's design patterns examples in PHP
+GoF's design patterns examples in PHP.
 
 Patterns implemented so far:
 * Singleton
